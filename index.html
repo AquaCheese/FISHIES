@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FISHIE GAME :D</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Background bubbles for ambiance -->
+        <div class="bubble-container"></div>
+        
+        <!-- Main aquarium tank -->
+        <div class="aquarium">
+            <div class="water-surface"></div>
+            <div class="fish-container"></div>
+            <div class="decorations">
+                <div class="coral coral-1"></div>
+                <div class="coral coral-2"></div>
+                <div class="seaweed seaweed-1"></div>
+                <div class="seaweed seaweed-2"></div>
+                <div class="rock rock-1"></div>
+                <div class="rock rock-2"></div>
+            </div>
+            <div class="aquarium-floor"></div>
+        </div>
+        
+        <!-- UI Elements -->
+        <div class="ui-panel">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="icon">💰</span>
+                    <span class="value" id="money">100</span>
+                </div>
+                <div class="stat-item">
+                    <span class="icon">🐠</span>
+                    <span class="value" id="fish-count">3</span>
+                </div>
+                <div class="stat-item">
+                    <span class="icon">💖</span>
+                    <span class="value" id="happiness">85%</span>
+                </div>
+            </div>
+            
+            <div class="actions">
+                <button class="action-btn" id="feed-fish" title="Feed Fish (Cost: 5)">
+                    <span class="icon">🍤</span>
+                    <span class="label">Feed</span>
+                </button>
+                <button class="action-btn" id="clean-water" title="Clean Water (Cost: 10)">
+                    <span class="icon">🧽</span>
+                    <span class="label">Clean</span>
+                </button>
+                <button class="action-btn" id="add-decoration" title="Add Decoration (Cost: 25)">
+                    <span class="icon">🪸</span>
+                    <span class="label">Decorate</span>
+                </button>
+            </div>
+            
+            <div class="shop">
+                <h3>🛒 Fish Shop</h3>
+                <div class="shop-items">
+                    <button class="shop-item" data-fish="goldfish" data-cost="30">
+                        <span class="fish-emoji">🐠</span>
+                        <span class="name">Goldfish</span>
+                        <span class="cost">$30</span>
+                    </button>
+                    <button class="shop-item" data-fish="tropical" data-cost="50">
+                        <span class="fish-emoji">🐟</span>
+                        <span class="name">Tropical</span>
+                        <span class="cost">$50</span>
+                    </button>
+                    <button class="shop-item" data-fish="angelfish" data-cost="75">
+                        <span class="fish-emoji">🌺</span>
+                        <span class="name">Angelfish</span>
+                        <span class="cost">$75</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Water quality indicator -->
+        <div class="water-quality">
+            <div class="quality-bar">
+                <div class="quality-fill" id="water-quality-fill"></div>
+            </div>
+            <span class="quality-label">Water Quality</span>
+        </div>
+        
+        <!-- Notification system -->
+        <div class="notification" id="notification"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
